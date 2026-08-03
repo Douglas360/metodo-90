@@ -323,7 +323,7 @@ footer a{color:#B6BECD}
       <h1>Você não tem<br>seis horas por dia.<br><span class="amber">Tem noventa minutos.</span></h1>
       <p class="sub">O sistema de estudo para quem trabalha oito horas, faz faculdade à noite e mesmo assim vai prestar o Enem.</p>
       <div class="cta-wrap" style="margin:0">
-        <a class="btn" href="#oferta">Quero minha rotina pronta</a>
+        <a class="btn" id="ctaHero" href="https://pay.kiwify.com.br/vjk9izS">Quero minha rotina pronta</a>
         <div class="btnsub">Acesso imediato · 14 dias de garantia</div>
       </div>
       <div class="trust">
@@ -941,7 +941,7 @@ const EXEMPLOS = [];
       ? lot.nome + " · " + lot.restantes + " de " + lot.vagas + " vagas"
       : (lot.nome || ""));
 
-  const links = ["ctaMain","ctaFinal","ctaSticky"];
+  const links = ["ctaHero","ctaMain","ctaFinal","ctaSticky"];
   if(CONFIG.checkout && CONFIG.checkout !== "#"){
     links.forEach(id=>{ const e=document.getElementById(id); if(e) e.href = CONFIG.checkout; });
   }else{
