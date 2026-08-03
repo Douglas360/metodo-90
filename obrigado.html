@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seu acesso · Método 90</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter+Tight:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14161F; --night:#171A28; --night2:#232739; --night3:#2E3348;
+  --mist:#E9EDF3; --line:#D6DDE7; --line-soft:#E7EDF4;
+  --muted:#6A7387; --muted-lt:#8A93A5;
+  --lamp:#F0A93B; --lamp-deep:#A96C15; --lamp-soft:#FDF3E2;
+  --indigo:#2C3690; --indigo-soft:#EDEFF9; --green:#4E8C7A;
+  --display:"Bricolage Grotesque","Inter Tight",system-ui,sans-serif;
+  --body:"Inter Tight",system-ui,-apple-system,sans-serif;
+  --mono:"DM Mono",ui-monospace,Menlo,monospace;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--mist);color:var(--ink);font-family:var(--body);
+  font-size:16.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);letter-spacing:-.03em;margin:0}
+p{margin:0 0 14px}
+a{color:var(--indigo)}
+
+/* ---------- TOPO ---------- */
+.hero{background:var(--night);color:#F2F4F8;padding:34px 0 40px;text-align:center}
+.wordmark{font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:-.03em;
+  text-transform:uppercase;display:inline-flex;gap:6px;align-items:baseline;color:#fff;
+  margin-bottom:26px}
+.wordmark span{font-family:var(--mono);font-weight:500;color:var(--lamp);letter-spacing:0}
+.tick{width:62px;height:62px;border-radius:50%;background:var(--lamp);color:#1B1403;
+  display:flex;align-items:center;justify-content:center;margin:0 auto 20px;
+  font-size:30px;font-weight:700;animation:pop .5s cubic-bezier(.2,.9,.3,1) both}
+@keyframes pop{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+.hero h1{font-weight:800;font-size:clamp(27px,5.4vw,40px);line-height:1.07;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--lamp)}
+.hero p{color:#B6BECD;max-width:44ch;margin:0 auto;font-size:17px}
+
+main{padding:0 0 60px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;
+  margin-top:18px}
+.card:first-child{margin-top:-24px;position:relative;z-index:2}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--lamp-deep);margin-bottom:11px}
+
+/* ---------- ENTREGAS ---------- */
+.item{display:flex;gap:18px;align-items:flex-start;padding:22px 0;
+  border-top:1px solid var(--line-soft)}
+.item:first-of-type{border-top:0;padding-top:4px}
+.item .ic{width:52px;height:52px;border-radius:13px;background:var(--night);color:var(--lamp);
+  display:flex;align-items:center;justify-content:center;flex:none;
+  font-family:var(--mono);font-size:11px;letter-spacing:.03em;text-align:center;line-height:1.1}
+.item .body{flex:1;min-width:0}
+.item h3{font-size:18.5px;font-weight:600;margin-bottom:5px}
+.item p{color:var(--muted);font-size:15.5px;margin-bottom:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  background:var(--lamp);color:#1B1403;border:0;border-radius:11px;padding:15px 24px;
+  font-family:var(--display);font-weight:700;font-size:16.5px;letter-spacing:-.02em;
+  text-decoration:none;cursor:pointer;box-shadow:0 3px 0 #C4801D;
+  transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 4px 0 #C4801D}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 #C4801D}
+.btn.ghost{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.ghost:hover{background:#F3F5F9;transform:none;box-shadow:inset 0 0 0 1.5px var(--ink)}
+.meta{font-family:var(--mono);font-size:11.5px;color:var(--muted-lt);margin-top:10px}
+
+/* ---------- AVISO DE E-MAIL ---------- */
+.mailbox{display:flex;gap:16px;align-items:flex-start;background:var(--indigo-soft);
+  border:1px solid #CFD5EE;border-radius:var(--r);padding:20px;margin-top:18px}
+.mailbox .ic{width:40px;height:40px;border-radius:11px;background:var(--indigo);color:#fff;
+  display:flex;align-items:center;justify-content:center;flex:none;font-size:19px}
+.mailbox b{display:block;margin-bottom:4px;font-size:16.5px}
+.mailbox p{margin:0;font-size:15px;color:#333B52}
+.mailbox code{font-family:var(--mono);font-size:13.5px;background:#fff;padding:1px 6px;
+  border-radius:5px;border:1px solid #CFD5EE}
+
+/* ---------- PRIMEIROS PASSOS ---------- */
+.steps{counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{counter-increment:s;position:relative;padding:15px 0 15px 46px;
+  border-top:1px solid var(--line-soft)}
+.steps li:first-child{border-top:0;padding-top:4px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:14px;width:30px;height:30px;
+  border-radius:9px;background:var(--lamp-soft);color:var(--lamp-deep);font-family:var(--mono);
+  font-size:13px;display:flex;align-items:center;justify-content:center}
+.steps li:first-child::before{top:3px}
+.steps li b{display:block;font-weight:600;margin-bottom:2px}
+.steps li span{color:var(--muted);font-size:15.5px}
+
+/* ---------- CAIXA DE DICA ---------- */
+.tip{background:var(--lamp-soft);border:1px solid #EAD3A9;border-radius:12px;padding:18px;
+  margin-top:18px;font-size:15px;color:#6B4A11}
+.tip b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.07em;
+  text-transform:uppercase;margin-bottom:6px;color:var(--lamp-deep)}
+.tip p:last-child{margin-bottom:0}
+
+/* ---------- ANEXOS ---------- */
+.annexes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.annexes div{background:#F7F9FC;border:1px solid var(--line-soft);border-radius:10px;
+  padding:12px 14px;font-size:14.5px}
+.annexes b{display:block;font-family:var(--mono);font-size:10.5px;color:var(--lamp-deep);
+  letter-spacing:.06em;margin-bottom:3px}
+
+/* ---------- SUPORTE ---------- */
+footer{background:var(--night);color:#8A93A5;padding:34px 0 40px;font-size:14px;text-align:center}
+footer a{color:#B6BECD}
+footer .legal{font-size:12.5px;color:#6E7789;margin-top:14px;line-height:1.6}
+
+@media (max-width:640px){
+  section,main{padding-bottom:44px}
+  .card{padding:20px 18px}
+  .item{flex-direction:column;gap:12px}
+  .item .ic{width:46px;height:46px}
+  .btn{width:100%}
+  .annexes{grid-template-columns:1fr}
+  body{font-size:16px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="wordmark">Método <span>90</span></div>
+    <div class="tick" aria-hidden="true">✓</div>
+    <h1>Compra confirmada.<br><em>Seu acesso está aqui.</em></h1>
+    <p>Baixe agora nesta página. Também enviamos tudo para o seu e-mail, para você não depender deste link.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="card">
+    <div class="eyebrow">Seus dois acessos</div>
+
+    <div class="item">
+      <div class="ic">PDF</div>
+      <div class="body">
+        <h3>Enem para quem trabalha</h3>
+        <p>O livro completo: 21 capítulos e 5 anexos, em formato A5 que lê bem no celular e imprime dois por folha A4.</p>
+        <a class="btn" id="linkEbook" href="#" download>Baixar o ebook</a>
+        <div class="meta">PDF · 89 páginas · guarde o arquivo, ele é seu para sempre</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="ic">WEB</div>
+      <div class="body">
+        <h3>Gerador de Rotina Método 90</h3>
+        <p>Você pinta seus horários fixos e ele devolve a grade da semana, com o assunto de cada bloco. Abre no navegador, sem instalar nada e sem cadastro.</p>
+        <a class="btn ghost" id="linkGerador" href="#" target="_blank" rel="noopener">Abrir o gerador</a>
+        <div class="meta">Funciona no celular · salve nos favoritos</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mailbox">
+    <div class="ic" aria-hidden="true">✉</div>
+    <div>
+      <b>Também enviamos por e-mail</b>
+      <p>O e-mail chega em até 5 minutos com estes mesmos acessos. Se não aparecer, confira o
+      <b style="display:inline">spam</b> e a aba <b style="display:inline">Promoções</b>, e marque
+      <code id="mailFrom">contato@metodo90.online</code> como remetente confiável.</p>
+    </div>
+  </div>
+
+  <section class="card">
+    <div class="eyebrow">Por onde começar</div>
+    <ol class="steps">
+      <li>
+        <b>Abra o gerador primeiro, não o livro</b>
+        <span>Pinte trabalho, faculdade, deslocamento e qualquer compromisso fixo. Leva cinco minutos e você já sai com a grade da sua semana.</span>
+      </li>
+      <li>
+        <b>Imprima a grade ou salve em PDF</b>
+        <span>Cole na parede ou deixe no celular. A ideia é que às 5h30 você não precise decidir nada, só sentar.</span>
+      </li>
+      <li>
+        <b>Leia os capítulos 1 a 7</b>
+        <span>São eles que explicam por que a grade é daquele jeito e o que fazer dentro de cada bloco. O resto do livro você lê ao longo das semanas.</span>
+      </li>
+      <li>
+        <b>Imprima os anexos B, C e D</b>
+        <span>Caderno de erros, grade de autocorreção da redação e checklist semanal. Umas dez cópias de cada cobrem a preparação inteira.</span>
+      </li>
+      <li>
+        <b>Marque o primeiro bloco no celular, com alarme</b>
+        <span>Para a próxima segunda-feira. É a única tarefa que o livro te dá.</span>
+      </li>
+    </ol>
+
+    <div class="tip">
+      <b>Uma coisa que vale saber agora</b>
+      <p>Você vai furar alguma semana. Faz parte, e o Capítulo 18 trata só disso.
+      A regra que importa: <b>a dívida não existe</b>. Não tente compensar bloco perdido.
+      Na segunda seguinte você volta na grade normal, começa pelo caderno de erros, e segue.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="eyebrow">O que tem dentro do PDF</div>
+    <p style="color:var(--muted);font-size:15.5px">Os cinco anexos ficam no fim do livro, prontos para imprimir.</p>
+    <div class="annexes">
+      <div><b>Anexo A</b>Como usar o gerador com o livro</div>
+      <div><b>Anexo B</b>Folha do caderno de erros</div>
+      <div><b>Anexo C</b>Grade de autocorreção da redação</div>
+      <div><b>Anexo D</b>Checklist semanal</div>
+      <div style="grid-column:1/-1"><b>Anexo E</b>Mapa das quatorze semanas até a prova</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="margin-bottom:8px"><b style="color:#fff">Problema com o acesso?</b></p>
+    <p>Escreva para <a id="mailLink" href="#">contato@metodo90.online</a> e resolvemos.</p>
+    <p class="legal">
+      Método 90 · Enem para quem trabalha. Este material é de uso pessoal.
+      A revenda e a redistribuição não são autorizadas.<br>
+      Garantia de 14 dias: se não servir para a sua rotina, escreva para o e-mail acima e devolvemos o valor integral.
+    </p>
+  </div>
+</footer>
+
+<script>
+"use strict";
+/* =======================================================================
+   CONFIGURAÇÃO. Edite só este bloco.
+   ======================================================================= */
+const CONFIG = {
+  // Link direto do PDF. Sugestão: hospede junto do site, ex.:
+  // "https://metodo90.online/arquivos/Metodo90-Enem-para-quem-trabalha.pdf"
+  ebook: "#",
+
+  // Link do gerador de rotina já hospedado.
+  gerador: "#",
+
+  contato: "contato@metodo90.online"
+};
+
+(function(){
+  const set = (id, href, label) => {
+    const e = document.getElementById(id);
+    if(!e) return;
+    if(href && href !== "#"){ e.href = href; return; }
+    e.href = "#";
+    e.addEventListener("click", ev => {
+      ev.preventDefault();
+      alert("Link ainda não configurado.\n\nAbra este arquivo e edite CONFIG." + label + ".");
+    });
+  };
+  set("linkEbook", CONFIG.ebook, "ebook");
+  set("linkGerador", CONFIG.gerador, "gerador");
+
+  const m = document.getElementById("mailLink");
+  if(m){ m.href = "mailto:" + CONFIG.contato; m.textContent = CONFIG.contato; }
+  const f = document.getElementById("mailFrom");
+  if(f) f.textContent = CONFIG.contato;
+})();
+</script>
+</body>
+</html>

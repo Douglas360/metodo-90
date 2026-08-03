@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Método 90 — Enem para quem trabalha</title>
+<meta name="description" content="O sistema de estudo para quem tem 90 minutos por dia, e não seis horas. Ebook de 89 páginas + gerador de rotina que monta seu cronograma a partir dos seus horários reais.">
+<meta property="og:title" content="Método 90 — Enem para quem trabalha">
+<meta property="og:description" content="Trabalha 8h, faculdade à noite, e ainda quer prestar o Enem? O cronograma de 6 horas por dia não é para você. Este é.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter+Tight:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14161F; --night:#171A28; --night2:#232739; --night3:#2E3348;
+  --mist:#E9EDF3; --card:#FFFFFF; --line:#D6DDE7; --line-soft:#E7EDF4;
+  --muted:#6A7387; --muted-lt:#8A93A5;
+  --lamp:#F0A93B; --lamp-deep:#A96C15; --lamp-soft:#FDF3E2;
+  --indigo:#2C3690; --indigo-soft:#EDEFF9;
+  --green:#4E8C7A; --red:#B5595C;
+  --display:"Bricolage Grotesque","Inter Tight",system-ui,sans-serif;
+  --body:"Inter Tight",system-ui,-apple-system,sans-serif;
+  --mono:"DM Mono",ui-monospace,Menlo,monospace;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--mist);color:var(--ink);font-family:var(--body);
+  font-size:16.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+.narrow{max-width:720px;margin:0 auto}
+section{padding:64px 0}
+.dark{background:var(--night);color:#F2F4F8}
+.dark h2,.dark h3{color:#fff}
+.dark p{color:#B6BECD}
+
+h1,h2,h3{font-family:var(--display);letter-spacing:-.03em;margin:0}
+h1{font-weight:800;font-size:clamp(31px,6vw,54px);line-height:1.04}
+h2{font-weight:800;font-size:clamp(25px,4.2vw,37px);line-height:1.1;margin-bottom:14px}
+h3{font-weight:600;font-size:19px;line-height:1.25;letter-spacing:-.02em}
+p{margin:0 0 14px}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--lamp-deep);margin-bottom:12px}
+.dark .eyebrow{color:var(--lamp)}
+.lede{font-size:18.5px;color:#404859;margin-bottom:26px}
+.dark .lede{color:#B6BECD}
+.amber{color:var(--lamp)}
+.mono{font-family:var(--mono)}
+
+/* ---------- BOTOES ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  background:var(--lamp);color:#1B1403;border:0;border-radius:12px;
+  padding:19px 30px;font-family:var(--display);font-weight:700;font-size:18px;
+  letter-spacing:-.02em;text-decoration:none;cursor:pointer;width:100%;
+  box-shadow:0 3px 0 #C4801D;transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 4px 0 #C4801D}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 #C4801D}
+.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px #4A5168}
+.btn.ghost:hover{background:rgba(255,255,255,.06)}
+.btnsub{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:center;margin-top:11px}
+.dark .btnsub{color:#8A93A5}
+.cta-wrap{max-width:430px;margin:0 auto}
+
+/* ---------- TOPO ---------- */
+.topbar{background:var(--night);color:#E7EAF1;font-family:var(--mono);font-size:12px;
+  padding:9px 0;position:sticky;top:0;z-index:40;border-bottom:1px solid var(--night3)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.topbar b{color:var(--lamp);font-weight:500}
+.wordmark{font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:-.03em;
+  text-transform:uppercase;display:inline-flex;gap:6px;align-items:baseline;color:#fff}
+.wordmark span{font-family:var(--mono);font-weight:500;color:var(--lamp);letter-spacing:0}
+
+/* ---------- HERO ---------- */
+.hero{background:var(--night);color:#F2F4F8;padding:52px 0 60px;overflow:hidden}
+.hero .grid2{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.hero h1{margin-bottom:18px}
+.hero .sub{font-size:18.5px;color:#B6BECD;margin-bottom:26px;max-width:36ch}
+.pill{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.05em;text-transform:uppercase;background:var(--night2);color:#C3CAD8;
+  border:1px solid var(--night3);border-radius:999px;padding:7px 14px;margin-bottom:22px}
+.pill i{width:7px;height:7px;border-radius:50%;background:var(--lamp);flex:none;
+  animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+.trust{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:20px;font-family:var(--mono);
+  font-size:11.5px;color:#8A93A5}
+.trust span{display:inline-flex;align-items:center;gap:6px}
+.trust b{color:var(--lamp);font-weight:500}
+
+/* ---------- SELO ---------- */
+.seal{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--night3);
+  background:linear-gradient(180deg,var(--night2),#1D2133);border-radius:999px;
+  padding:8px 16px 8px 9px;margin-bottom:20px}
+.seal .mark{width:26px;height:26px;border-radius:50%;background:var(--lamp);color:#1B1403;
+  font-family:var(--display);font-weight:800;font-size:13px;display:flex;align-items:center;
+  justify-content:center;flex:none;letter-spacing:-.03em}
+.seal b{font-family:var(--display);font-weight:700;font-size:13.5px;letter-spacing:-.02em;color:#fff}
+.seal span{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--lamp);display:block;line-height:1.35}
+.seal.light{background:linear-gradient(180deg,#fff,#F7F9FC);border-color:var(--line)}
+.seal.light b{color:var(--ink)}
+.seal.light span{color:var(--lamp-deep)}
+.sealband{display:flex;align-items:center;gap:20px;background:var(--lamp-soft);
+  border:1px solid #EAD3A9;border-radius:var(--r);padding:20px 22px}
+.sealband .big{width:58px;height:58px;border-radius:50%;background:var(--night);color:var(--lamp);
+  font-family:var(--display);font-weight:800;font-size:21px;display:flex;align-items:center;
+  justify-content:center;flex:none;letter-spacing:-.04em}
+.sealband h3{margin:0 0 4px;font-size:17px}
+.sealband p{margin:0;font-size:15px;color:#6B4A11}
+@media (max-width:820px){
+  .sealband{flex-direction:column;align-items:flex-start;gap:14px}
+}
+
+/* ---------- GRADE ASSINATURA ---------- */
+.demo{background:var(--night2);border:1px solid var(--night3);border-radius:16px;padding:16px}
+.demo .head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.demo .head b{font-family:var(--mono);font-size:11px;color:#8A93A5;font-weight:400;
+  letter-spacing:.05em;text-transform:uppercase}
+.demo .head u{text-decoration:none;font-family:var(--mono);font-size:19px;color:var(--lamp)}
+.dgrid{display:grid;grid-template-columns:20px repeat(7,minmax(0,1fr));gap:2.5px}
+.dgrid .dh{font-family:var(--mono);font-size:8.5px;color:#6E7789;text-align:center;padding-bottom:4px}
+.dgrid .hl{font-family:var(--mono);font-size:7.5px;color:#5A6377;text-align:right;
+  padding-right:3px;line-height:1;transform:translateY(-2px)}
+.dc{height:11px;border-radius:2px;background:#20243A}
+.dc.busy{background:#3A415A}
+.dc.st{background:var(--lamp);transform:scale(.6);opacity:0;transition:transform .3s,opacity .3s}
+.dc.st.on{transform:scale(1);opacity:1}
+.demo .foot{font-family:var(--mono);font-size:10px;color:#6E7789;margin-top:11px;
+  display:flex;gap:14px;flex-wrap:wrap}
+.demo .foot span{display:inline-flex;align-items:center;gap:5px}
+.demo .foot i{width:9px;height:9px;border-radius:2px;display:inline-block}
+
+/* ---------- CARDS ---------- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.cards{display:grid;gap:16px}
+.cards.c2{grid-template-columns:1fr 1fr}
+.cards.c3{grid-template-columns:repeat(3,1fr)}
+.dark .card{background:var(--night2);border-color:var(--night3)}
+
+/* ---------- CICLO DA CULPA ---------- */
+.steps{counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{counter-increment:s;position:relative;padding:14px 0 14px 46px;
+  border-top:1px solid var(--line-soft)}
+.steps li:first-child{border-top:0}
+.steps li::before{content:counter(s);position:absolute;left:0;top:13px;width:29px;height:29px;
+  border-radius:8px;background:var(--night);color:var(--lamp);font-family:var(--mono);
+  font-size:12px;display:flex;align-items:center;justify-content:center}
+.steps li b{display:block;font-weight:600}
+.steps li span{color:var(--muted);font-size:15.5px}
+
+/* ---------- COMPARACAO ---------- */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);
+  border-radius:var(--r);overflow:hidden;border:1px solid var(--line)}
+.vs > div{background:#fff;padding:20px}
+.vs .bad{background:#FBF7F7}
+.vs h4{margin:0 0 14px;font-family:var(--mono);font-size:11px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--muted)}
+.vs ul{margin:0;padding:0;list-style:none}
+.vs li{padding:8px 0 8px 24px;position:relative;font-size:15.5px;border-top:1px dashed var(--line-soft)}
+.vs li:first-child{border-top:0}
+.vs li::before{position:absolute;left:0;top:8px;font-family:var(--mono);font-size:13px}
+.vs .bad li::before{content:"×";color:var(--red);font-size:16px;top:6px}
+.vs .good li::before{content:"✓";color:var(--green)}
+
+/* ---------- ENTREGAS ---------- */
+.deliver{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.dv{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.dv .tag{background:var(--night);color:var(--lamp);font-family:var(--mono);font-size:10.5px;
+  letter-spacing:.08em;text-transform:uppercase;padding:9px 20px}
+.dv .in{padding:22px 20px}
+.dv h3{margin-bottom:8px}
+.dv ul{margin:12px 0 0;padding-left:19px;font-size:15.5px;color:#404859}
+.dv li{margin-bottom:6px}
+
+/* ---------- SUMARIO ---------- */
+.toc{border:1px solid var(--line);border-radius:var(--r);background:#fff;overflow:hidden}
+.toc .part{background:#F7F9FC;border-top:1px solid var(--line-soft);padding:13px 20px;
+  display:flex;gap:12px;align-items:baseline}
+.toc .part:first-child{border-top:0}
+.toc .part i{font-family:var(--mono);font-size:11px;color:var(--lamp-deep);font-style:normal;flex:none}
+.toc .part b{font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:-.02em}
+.toc .items{padding:6px 20px 14px}
+.toc .items div{font-size:15px;color:#404859;padding:5px 0 5px 23px;position:relative}
+.toc .items div::before{content:"";position:absolute;left:0;top:13px;width:11px;height:1.5px;
+  background:var(--lamp)}
+.statrow{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line-soft);
+  border-radius:12px;overflow:hidden;margin-bottom:24px}
+.statrow div{background:#fff;padding:16px 14px}
+.statrow b{display:block;font-family:var(--mono);font-size:23px;letter-spacing:-.02em}
+.statrow span{font-size:12.5px;color:var(--muted)}
+
+/* ---------- PARA QUEM ---------- */
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fit .box{border-radius:var(--r);padding:22px;border:1px solid var(--line);background:#fff}
+.fit .no{background:#FBF7F7;border-color:#E6D2D2}
+.fit h3{font-size:17px;margin-bottom:12px}
+.fit ul{margin:0;padding:0;list-style:none;font-size:15.5px}
+.fit li{padding:7px 0 7px 23px;position:relative}
+.fit li::before{position:absolute;left:0;top:7px;font-family:var(--mono)}
+.fit .yes li::before{content:"✓";color:var(--green)}
+.fit .no li::before{content:"×";color:var(--red);font-size:15px;top:5px}
+
+/* ---------- DEPOIMENTOS ---------- */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.q{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.q p{font-size:15.5px;color:#2C3242}
+.q .who{display:flex;align-items:center;gap:11px;margin-top:16px;padding-top:14px;
+  border-top:1px solid var(--line-soft)}
+.q .av{width:36px;height:36px;border-radius:50%;background:var(--night);color:var(--lamp);
+  font-family:var(--mono);font-size:13px;display:flex;align-items:center;justify-content:center;flex:none}
+.q .who b{display:block;font-size:14.5px}
+.q .who span{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.q .stars{color:var(--lamp);font-size:14px;letter-spacing:2px;margin-bottom:10px}
+.beta{background:var(--lamp-soft);border:1px solid #EAD3A9;border-radius:var(--r);padding:24px}
+.beta h3{margin-bottom:10px}
+.warn{background:#FFF4F4;border:1px dashed var(--red);border-radius:12px;padding:16px 18px;
+  margin-bottom:22px;font-size:14.5px;color:#7A2F32}
+.warn b{font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;
+  display:block;margin-bottom:6px}
+
+/* ---------- OFERTA ---------- */
+.offer{background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:18px;
+  overflow:hidden;box-shadow:0 14px 36px rgba(20,22,31,.13)}
+/* a caixa vive dentro da seção escura: força as cores claras de volta */
+.dark .offer, .dark .offer .in, .dark .offer p, .dark .offer b,
+.dark .offer li, .dark .offer h3{color:var(--ink)}
+.offer .top{background:var(--ink);color:#fff;padding:14px 24px;font-family:var(--mono);
+  font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;display:flex;
+  justify-content:space-between;gap:10px;flex-wrap:wrap}
+.offer .top b{color:var(--lamp);font-weight:500}
+.offer .in{padding:26px 24px 28px}
+.stack{margin:0 0 22px;padding:0;list-style:none}
+.stack li{display:flex;justify-content:space-between;gap:14px;align-items:baseline;
+  padding:11px 0;border-top:1px solid var(--line);font-size:15.5px}
+.stack li:first-child{border-top:0}
+.stack li b{font-weight:600;color:var(--ink)}
+.dark .stack li span, .stack li span{font-family:var(--mono);font-size:13px;color:#5C6577;
+  white-space:nowrap}
+.stack li.tot{border-top:1.5px solid var(--ink);margin-top:5px;padding-top:13px;font-size:16.5px}
+.price{text-align:center;margin-bottom:20px}
+.dark .price .old, .price .old{font-family:var(--mono);font-size:15px;color:#7B8496;
+  text-decoration:line-through}
+.price .now{font-family:var(--display);font-weight:800;font-size:52px;letter-spacing:-.04em;
+  line-height:1;margin:5px 0;color:var(--ink)}
+.price .now em{color:var(--lamp-deep)}
+.price .now em{font-style:normal;font-size:23px;vertical-align:.55em;margin-right:3px}
+.dark .price .note, .price .note{font-family:var(--mono);font-size:12.5px;color:#5C6577}
+.guarantee{display:flex;gap:15px;align-items:flex-start;background:var(--indigo-soft);
+  border-radius:12px;padding:18px;margin-top:20px}
+.guarantee .ic{width:38px;height:38px;border-radius:10px;background:var(--indigo);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:15px;flex:none}
+.dark .guarantee p, .guarantee p{margin:0;font-size:14.5px;color:#333B52}
+.dark .guarantee b, .guarantee b{color:var(--ink)}
+.guarantee b{display:block;font-size:15.5px;color:var(--ink);margin-bottom:3px}
+
+/* ---------- CONTAGEM ---------- */
+.count{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:430px;margin:0 auto 24px}
+.count div{background:var(--night2);border:1px solid var(--night3);border-radius:12px;
+  padding:14px 6px;text-align:center}
+.count b{display:block;font-family:var(--mono);font-size:27px;color:var(--lamp);line-height:1}
+.count span{font-family:var(--mono);font-size:10px;color:#8A93A5;letter-spacing:.06em;
+  text-transform:uppercase}
+
+/* ---------- FAQ ---------- */
+details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:10px}
+details[open]{border-color:#B9C4D3}
+summary{cursor:pointer;padding:17px 20px;font-weight:600;font-size:16.5px;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);color:var(--lamp-deep);font-size:20px;
+  line-height:1;flex:none}
+details[open] summary::after{content:"–"}
+details .ans{padding:0 20px 18px;font-size:15.5px;color:#404859}
+details .ans p:last-child{margin-bottom:0}
+
+/* ---------- RODAPE E BARRA FIXA ---------- */
+footer{background:var(--night);color:#8A93A5;padding:40px 0 100px;font-size:13.5px}
+footer a{color:#B6BECD}
+.legal{font-size:12.5px;line-height:1.6;color:#6E7789;margin-top:16px}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(23,26,40,.97);
+  backdrop-filter:blur(8px);border-top:1px solid var(--night3);padding:11px 14px;
+  display:none;gap:12px;align-items:center}
+.sticky .txt{flex:1;min-width:0}
+.sticky .txt b{display:block;font-size:14px;color:#fff;font-family:var(--display);font-weight:700}
+.sticky .txt span{font-family:var(--mono);font-size:10.5px;color:#8A93A5}
+.sticky .btn{width:auto;padding:13px 20px;font-size:15.5px;flex:none}
+.sticky.on{display:flex}
+
+@media (max-width:820px){
+  section{padding:46px 0}
+  .hero{padding:34px 0 44px}
+  .hero .grid2{grid-template-columns:1fr;gap:30px}
+  .hero .sub{max-width:none}
+  .cards.c2,.cards.c3,.vs,.deliver,.fit,.quotes{grid-template-columns:1fr}
+  .statrow{grid-template-columns:1fr 1fr}
+  .count{grid-template-columns:repeat(4,1fr);gap:7px}
+  .count b{font-size:22px}
+  .lede{font-size:17px}
+  body{font-size:16px}
+  .offer .in{padding:22px 18px 24px}
+  .price .now{font-size:44px}
+  footer{padding-bottom:96px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="wordmark">Método <span>90</span></span>
+    <span>Prova em <b id="tbDays">102 dias</b></span>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap grid2">
+    <div>
+      <span class="pill"><i></i> <span id="pillWeeks">14 semanas até o Enem 2026</span></span>
+      <div id="sealHero"></div>
+      <h1>Você não tem<br>seis horas por dia.<br><span class="amber">Tem noventa minutos.</span></h1>
+      <p class="sub">O sistema de estudo para quem trabalha oito horas, faz faculdade à noite e mesmo assim vai prestar o Enem.</p>
+      <div class="cta-wrap" style="margin:0">
+        <a class="btn" href="#oferta">Quero minha rotina pronta</a>
+        <div class="btnsub">Acesso imediato · 14 dias de garantia</div>
+      </div>
+      <div class="trust">
+        <span><b>89</b> páginas de método</span>
+        <span><b>+</b> gerador de rotina</span>
+        <span><b>5</b> anexos para imprimir</span>
+      </div>
+    </div>
+
+    <div class="demo" aria-hidden="true">
+      <div class="head">
+        <b>Brechas encontradas</b>
+        <u id="demoHours">0h00</u>
+      </div>
+      <div class="dgrid" id="dgrid"></div>
+      <div class="foot">
+        <span><i style="background:#3A415A"></i> sua vida</span>
+        <span><i style="background:#F0A93B"></i> seu estudo</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ IDENTIFICACAO ============ -->
+<section>
+  <div class="wrap narrow">
+    <div class="eyebrow">Se isso é a sua semana</div>
+    <h2>Trabalho até as 17h. Faculdade até as 22h30. Terapia na sexta. Treino no domingo.</h2>
+    <p class="lede">E no meio disso tudo, a pergunta que não sai da cabeça: dá tempo?</p>
+    <p>Você acorda às 5h porque é o único horário em que ninguém te pede nada. Faz prova antiga no fim de semana quando sobra. Tenta corrigir durante a semana e nem sempre consegue. Já baixou três cronogramas diferentes e nenhum caberia na sua vida nem se você não dormisse.</p>
+    <p>Aí bate a frase que você já disse para alguém: <b>"nem me lembre, nem estudei direito ainda."</b></p>
+    <p>O problema não é a sua disciplina. Alguém que acorda às 5h depois de um dia de oito horas de trabalho tem disciplina de sobra. O problema é que <b>todo material de Enem no Brasil foi escrito para o adolescente de 17 anos em cursinho integral</b>, com o dia inteiro livre. Quando você tenta se encaixar naquele molde, a conta não fecha, e a conclusão que sobra é a mais injusta possível: que você não dá conta.</p>
+  </div>
+</section>
+
+<!-- ============ AGITACAO ============ -->
+<section class="dark">
+  <div class="wrap narrow">
+    <div class="eyebrow">Por que sempre para na terceira semana</div>
+    <h2>O ciclo da culpa</h2>
+    <p class="lede">Não é falta de força de vontade. É um plano sem folga encontrando uma vida real.</p>
+    <div class="card" style="padding:8px 22px">
+      <ol class="steps" style="color:#C3CAD8">
+        <li><b style="color:#fff">Domingo</b><span style="color:#8A93A5">Você monta o plano com entusiasmo, num caderno novo.</span></li>
+        <li><b style="color:#fff">Segunda e terça</b><span style="color:#8A93A5">Você cumpre. Está funcionando.</span></li>
+        <li><b style="color:#fff">Quarta</b><span style="color:#8A93A5">O trabalho atrasa e você perde o bloco.</span></li>
+        <li><b style="color:#fff">Quinta</b><span style="color:#8A93A5">Tenta compensar e não consegue: o plano já estava no limite.</span></li>
+        <li><b style="color:#fff">Sexta</b><span style="color:#8A93A5">Está devendo três blocos e evita olhar o caderno.</span></li>
+        <li><b style="color:#fff">Sábado</b><span style="color:#8A93A5">Não estuda, porque estudar significaria encarar o atraso.</span></li>
+        <li><b style="color:#fff">Domingo</b><span style="color:#8A93A5">Monta um plano novo, mais agressivo, para compensar.</span></li>
+      </ol>
+    </div>
+    <p style="margin-top:24px">Repare no passo 4. O plano não tinha folga. <b style="color:#fff">Um plano sem folga não é ambicioso, é frágil</b>: quebra na primeira variação normal da vida. E variação normal da vida acontece toda semana.</p>
+  </div>
+</section>
+
+<!-- ============ A VIRADA ============ -->
+<section>
+  <div class="wrap">
+    <div class="narrow" style="text-align:center;margin-bottom:32px">
+      <div class="eyebrow">O que muda aqui</div>
+      <h2>Um plano construído a partir dos seus horários, não dos horários de outra pessoa</h2>
+    </div>
+    <div class="vs">
+      <div class="bad">
+        <h4>O cronograma que você já tentou</h4>
+        <ul>
+          <li>Parte de 6 horas por dia</li>
+          <li>Preenche todo o tempo livre</li>
+          <li>Ignora deslocamento e cansaço</li>
+          <li>Assume sete dias iguais</li>
+          <li>Manda cobrir todo o conteúdo</li>
+          <li>Mede horas estudadas</li>
+          <li>Quebra e precisa ser refeito do zero</li>
+        </ul>
+      </div>
+      <div class="good">
+        <h4>O Método 90</h4>
+        <ul>
+          <li>Parte de 90 minutos por dia</li>
+          <li>Preserva 20% de folga de propósito</li>
+          <li>Desconta 30 min antes e depois de cada compromisso</li>
+          <li>Tem um dia leve obrigatório por semana</li>
+          <li>Prioriza por peso e recorrência</li>
+          <li>Mede erros fechados</li>
+          <li>Tem protocolo para a semana furada</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AS DUAS ENTREGAS ============ -->
+<section style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="narrow" style="text-align:center;margin-bottom:30px">
+      <div class="eyebrow">O que você recebe</div>
+      <h2>Duas entregas que trabalham juntas</h2>
+      <p class="lede" style="margin-bottom:0">O livro é o método. A ferramenta aplica o método na sua semana.</p>
+    </div>
+    <div id="sealBand" style="margin-bottom:26px"></div>
+    <div class="deliver">
+      <div class="dv">
+        <div class="tag">Entrega 1 · PDF de 89 páginas</div>
+        <div class="in">
+          <h3>O livro: Enem para quem trabalha</h3>
+          <p style="color:var(--muted);font-size:15.5px">O método completo, em formato A5 que lê bem no celular e imprime dois por folha A4.</p>
+          <ul>
+            <li>Como o TRI calcula sua nota de verdade</li>
+            <li>O método de estudo por questões, passo a passo</li>
+            <li>Caderno de erros e revisão espaçada</li>
+            <li>A redação inteira: 5 competências, estrutura, repertório, intervenção</li>
+            <li>Os assuntos que mais caem, matéria por matéria</li>
+            <li>O protocolo de quando você furar a semana</li>
+          </ul>
+        </div>
+      </div>
+      <div class="dv">
+        <div class="tag">Entrega 2 · Ferramenta online</div>
+        <div class="in">
+          <h3>O Gerador de Rotina</h3>
+          <p style="color:var(--muted);font-size:15.5px">Você pinta seus horários fixos. Ele devolve a grade da semana, pronta, com o assunto de cada bloco.</p>
+          <ul>
+            <li>Funciona no celular, sem instalar nada</li>
+            <li>Sem cadastro e sem senha: abre e usa</li>
+            <li>Respeita deslocamento, terapia, treino, faculdade</li>
+            <li>Define o assunto de cada bloco por prioridade</li>
+            <li>Já embute o ciclo de revisão D+1, D+7 e D+30</li>
+            <li>Exporta em PDF para imprimir e colar na parede</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="cta-wrap" style="margin-top:30px">
+      <a class="btn" href="#oferta">Ver a oferta completa</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUMARIO ============ -->
+<section>
+  <div class="wrap">
+    <div class="narrow" style="margin-bottom:26px">
+      <div class="eyebrow">Dentro do livro</div>
+      <h2>21 capítulos, 5 anexos, nenhuma página de enchimento</h2>
+    </div>
+    <div class="statrow">
+      <div><b>89</b><span>páginas</span></div>
+      <div><b>21</b><span>capítulos</span></div>
+      <div><b>5</b><span>anexos imprimíveis</span></div>
+      <div><b>A5</b><span>lê no celular</span></div>
+    </div>
+    <div class="toc">
+      <div class="part"><i>PARTE 1</i><b>O mapa</b></div>
+      <div class="items">
+        <div>Por que o cronograma padrão falha com você</div>
+        <div>A prova, sem mistério: o que cai e quanto pesa</div>
+        <div>Como a nota é calculada de verdade</div>
+        <div>A conta do seu tempo: por que 90 minutos bastam</div>
+      </div>
+      <div class="part"><i>PARTE 2</i><b>O método</b></div>
+      <div class="items">
+        <div>Estudo por questões</div>
+        <div>O caderno de erros</div>
+        <div>Revisão espaçada: D+1, D+7, D+30</div>
+        <div>A prova antiga e o diagnóstico</div>
+      </div>
+      <div class="part"><i>PARTE 3</i><b>A redação</b></div>
+      <div class="items">
+        <div>As cinco competências</div>
+        <div>A estrutura que não falha</div>
+        <div>Repertório: os oito coringas</div>
+        <div>A proposta de intervenção</div>
+        <div>Autocorreção com a grade oficial</div>
+      </div>
+      <div class="part"><i>PARTE 4</i><b>Os assuntos que mais rendem</b></div>
+      <div class="items">
+        <div>Matemática, em ordem de prioridade</div>
+        <div>Linguagens e o protocolo de interpretação</div>
+        <div>Ciências da Natureza: Bio, Química e Física</div>
+        <div>Ciências Humanas</div>
+      </div>
+      <div class="part"><i>PARTE 5</i><b>Constância</b></div>
+      <div class="items">
+        <div>Furei a semana: o protocolo de recuperação</div>
+        <div>Sono, corpo e o custo de acordar às 5h</div>
+        <div>As duas últimas semanas</div>
+        <div>O dia da prova</div>
+      </div>
+      <div class="part"><i>ANEXOS</i><b>Para imprimir e usar</b></div>
+      <div class="items">
+        <div>Como usar o gerador com o livro</div>
+        <div>Folha do caderno de erros</div>
+        <div>Grade de autocorreção da redação</div>
+        <div>Checklist semanal</div>
+        <div>Mapa das quatorze semanas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section class="dark">
+  <div class="wrap">
+    <div class="narrow" style="text-align:center;margin-bottom:30px">
+      <div class="eyebrow">Como começa</div>
+      <h2>Da compra ao primeiro bloco em 10 minutos</h2>
+    </div>
+    <div class="cards c3">
+      <div class="card">
+        <div class="mono amber" style="font-size:12px;margin-bottom:9px">PASSO 1</div>
+        <h3>Você recebe o acesso</h3>
+        <p style="font-size:15.5px;margin:0">O PDF e o link da ferramenta chegam no seu e-mail, na hora, logo depois do pagamento.</p>
+      </div>
+      <div class="card">
+        <div class="mono amber" style="font-size:12px;margin-bottom:9px">PASSO 2</div>
+        <h3>Pinta seus horários</h3>
+        <p style="font-size:15.5px;margin:0">Trabalho, faculdade, terapia, treino, deslocamento. No celular são dois toques por compromisso.</p>
+      </div>
+      <div class="card">
+        <div class="mono amber" style="font-size:12px;margin-bottom:9px">PASSO 3</div>
+        <h3>Começa na segunda</h3>
+        <p style="font-size:15.5px;margin:0">A grade sai pronta, com o assunto de cada bloco. Você imprime e só precisa sentar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA QUEM ============ -->
+<section>
+  <div class="wrap">
+    <div class="narrow" style="margin-bottom:26px">
+      <div class="eyebrow">Antes de comprar</div>
+      <h2>Isso não é para todo mundo</h2>
+      <p class="lede" style="margin-bottom:0">Prefiro que você não compre do que compre errado e peça reembolso.</p>
+    </div>
+    <div class="fit">
+      <div class="box yes">
+        <h3>É para você se</h3>
+        <ul>
+          <li>Você trabalha e tem entre 1h e 2h por dia, no máximo</li>
+          <li>Vai prestar o Enem em 8 e 15 de novembro de 2026</li>
+          <li>Já tentou seguir cronograma e não deu conta</li>
+          <li>Quer saber o que estudar, não assistir mais aula</li>
+          <li>Faz faculdade, tem filho, ou volta a estudar depois de anos</li>
+          <li>Prestou o Enem antes e quer subir a nota com o tempo que tem</li>
+        </ul>
+      </div>
+      <div class="box no">
+        <h3>Não é para você se</h3>
+        <ul>
+          <li>Você quer videoaulas de conteúdo: aqui é método, não aula</li>
+          <li>Você quer que alguém garanta uma nota específica</li>
+          <li>Você tem o dia livre e já estuda 6h por dia com constância</li>
+          <li>Você espera resolver a preparação sem abrir o material</li>
+          <li>Você procura banco de questões: as provas do INEP são grátis e eu te mostro como usar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROVA SOCIAL ============ -->
+<section id="prova" style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="narrow" style="margin-bottom:26px">
+      <div class="eyebrow">Prova social</div>
+      <h2 id="socialTitle">Quem já está usando</h2>
+    </div>
+    <div id="socialArea"></div>
+  </div>
+</section>
+
+<!-- ============ OFERTA ============ -->
+<section id="oferta" class="dark">
+  <div class="wrap">
+    <div class="narrow" style="text-align:center;margin-bottom:28px">
+      <div class="eyebrow">A oferta</div>
+      <h2>Tudo o que você precisa para as próximas <span class="amber" id="offerWeeks">14 semanas</span></h2>
+    </div>
+
+    <div class="count" id="count">
+      <div><b id="cD">00</b><span>dias</span></div>
+      <div><b id="cH">00</b><span>horas</span></div>
+      <div><b id="cM">00</b><span>min</span></div>
+      <div><b id="cS">00</b><span>seg</span></div>
+    </div>
+    <p style="text-align:center;font-family:var(--mono);font-size:12.5px;color:#8A93A5;margin-bottom:30px">
+      até a prova do dia 8 de novembro de 2026
+    </p>
+
+    <div class="narrow">
+      <div class="offer">
+        <div class="top">
+          <span id="offerLabel">Método 90 · acesso completo</span>
+          <b id="lotLabel">Turma de lançamento</b>
+        </div>
+        <div class="in">
+          <ul class="stack">
+            <li><b>Livro: Enem para quem trabalha</b><span>89 páginas</span></li>
+            <li><b>Gerador de Rotina Método 90</b><span>ferramenta online</span></li>
+            <li><b>Folha do caderno de erros</b><span>anexo B</span></li>
+            <li><b>Grade de autocorreção da redação</b><span>anexo C</span></li>
+            <li><b>Checklist semanal</b><span>anexo D</span></li>
+            <li><b>Mapa das quatorze semanas</b><span>anexo E</span></li>
+            <li class="tot"><b>Tudo isso, por</b><span id="stackTotal">de R$ 97</span></li>
+          </ul>
+
+          <div class="price">
+            <div class="old" id="priceOld">R$ 97</div>
+            <div class="now"><em>R$</em><span id="priceNow">47</span></div>
+            <div class="note" id="priceNote">à vista ou em até 3x no cartão</div>
+          </div>
+
+          <a class="btn" id="ctaMain" href="https://pay.kiwify.com.br/vjk9izS">Comprar e receber agora</a>
+          <div class="btnsub">Pagamento seguro · acesso imediato no e-mail</div>
+
+          <div class="guarantee">
+            <div class="ic">14</div>
+            <div>
+              <b>Garantia de 14 dias</b>
+              <p>Se você abrir, ler e concluir que não serve para a sua rotina, pede o reembolso e devolvemos o valor integral. Sem formulário e sem pergunta. A lei brasileira te dá 7 dias; nós damos 14.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-top:26px;font-size:15.5px">
+        Cada semana que passa é uma semana a menos de preparação. Não porque alguém inventou um prazo,
+        mas porque a data da prova não se move.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section>
+  <div class="wrap narrow">
+    <div class="eyebrow">Dúvidas</div>
+    <h2 style="margin-bottom:24px">Perguntas que sempre aparecem</h2>
+
+    <details open>
+      <summary>Eu nunca prestei o Enem na vida. Serve para mim?</summary>
+      <div class="ans">
+        <p>Serve, e existe um capítulo inteiro sobre isso. O Capítulo 2 explica a prova do zero: os dois domingos, quantas questões de cada área, os horários, quanto tempo você tem por questão. E o gerador, quando você marca que nunca prestou, coloca uma prova antiga completa no primeiro fim de semana, justamente para você conhecer o formato antes de qualquer outra coisa.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Tirei uma nota X no último Enem. Vou conseguir chegar em Y?</summary>
+      <div class="ans">
+        <p>Não vou responder isso, e vou ser honesto sobre o motivo: ninguém pode. A sua nota depende da prova daquele ano, da sua constância, do seu dia. Qualquer material que garanta uma nota específica está te vendendo uma coisa que não pode entregar.</p>
+        <p>O que este produto faz é diferente e verificável: ele mostra <b>onde o seu tempo rende mais</b> e organiza a sua semana para você chegar em novembro tendo estudado de forma consistente, em vez de ter começado três vezes e parado três vezes.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>São videoaulas? Tem professor explicando conteúdo?</summary>
+      <div class="ans">
+        <p>Não. E isso é uma escolha, não uma limitação. Conteúdo de Enem em vídeo já existe de graça e em excesso: no YouTube, no Curso Enem Gratuidade, em dezenas de canais bons. O que não existe é alguém te dizer <b>o que estudar hoje, nos 90 minutos que você tem</b>, e como transformar isso em nota.</p>
+        <p>É isso que você compra aqui: o método e a rotina. O conteúdo você pega de graça, e o livro te diz exatamente onde.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Eu tenho menos de 90 minutos por dia. Ainda funciona?</summary>
+      <div class="ans">
+        <p>Funciona, com ajuste, e o livro traz a regra. Em blocos de 60 minutos você faz um assunto só. Em blocos de 30 minutos você não abre matéria nova: usa o caderno de erros, que é o uso mais rentável de meia hora que existe. O gerador aplica essa regra sozinho.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Preciso instalar algo? Funciona no meu celular?</summary>
+      <div class="ans">
+        <p>Não precisa instalar nada. A ferramenta abre no navegador do celular, do tablet ou do computador, e não pede cadastro nem senha. No celular, você marca cada compromisso com dois toques. O livro é um PDF que você lê no celular ou imprime.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>A ferramenta guarda meus dados?</summary>
+      <div class="ans">
+        <p>Não guarda nada. Não há login, não há banco de dados e nada é enviado para nenhum servidor. Você preenche, gera, exporta o PDF. Se fechar a página, a grade some, e é por isso que a exportação existe.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Quanto tempo tenho de acesso?</summary>
+      <div class="ans">
+        <p>O PDF é seu para sempre: baixa e guarda. O link da ferramenta continua funcionando, e as correções e melhorias que eu fizer nela você recebe sem pagar de novo.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>E se eu comprar e achar que não serve?</summary>
+      <div class="ans">
+        <p>Você pede reembolso em até 14 dias e recebe o valor integral, sem precisar justificar. Prefiro devolver seu dinheiro do que ter alguém frustrado com um material que não era para o caso dele. Por isso a seção "não é para você se" está nesta página, antes do botão de compra.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Serve para vestibular e concurso também?</summary>
+      <div class="ans">
+        <p>O método serve: estudo por questões, caderno de erros e revisão espaçada funcionam em qualquer prova. Mas o conteúdo é <b>calibrado para o Enem</b>: os pesos, os assuntos priorizados, a redação com as cinco competências, os horários da prova. Se o seu objetivo é concurso, você vai aproveitar as Partes 2 e 5 e pouco do resto.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="dark" style="padding-top:52px">
+  <div class="wrap narrow" style="text-align:center">
+    <div class="eyebrow">Última coisa</div>
+    <h2>Setenta blocos de noventa minutos. É isso que separa hoje da prova.</h2>
+    <p class="lede">É uma quantidade de trabalho perfeitamente humana, feita por alguém que já trabalha oito horas por dia. O que você não pode é gastar mais três semanas montando cronograma em vez de estudar.</p>
+    <div class="cta-wrap">
+      <a class="btn" id="ctaFinal" href="https://pay.kiwify.com.br/vjk9izS">Começar agora por R$ <span id="priceFinal">47</span></a>
+      <div class="btnsub">14 dias de garantia · acesso imediato</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="wordmark">Método <span>90</span></span>
+    <p style="margin-top:14px">Enem para quem trabalha. Método de estudo e organização de rotina.</p>
+    <p class="legal">
+      Este produto organiza tempo, prioridade e método de estudo. <b style="color:#8A93A5">Ele não estima nota e não promete
+      aprovação.</b> O resultado no Enem depende de fatores que nenhum material controla, incluindo a prova daquele ano,
+      a concorrência do curso escolhido e a constância de cada pessoa. Método 90 não tem vínculo com o Inep nem com o
+      Ministério da Educação. As provas e gabaritos anteriores citados no livro são de acesso público e gratuito no site
+      do Inep. Datas da prova conforme edital do Enem 2026: 8 e 15 de novembro de 2026.
+    </p>
+    <p class="legal" id="footLinks">
+      Contato: <a href="mailto:contato@metodo90.online">contato@metodo90.online</a> · <a href="#">Termos de uso</a> · <a href="#">Política de privacidade</a> · CNPJ 20.763.474/0001-00
+    </p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <div class="txt">
+    <b>Método 90 · R$ <span id="priceSticky">47</span></b>
+    <span id="stickyWeeks">14 semanas até a prova</span>
+  </div>
+  <a class="btn" id="ctaSticky" href="#oferta">Quero</a>
+</div>
+
+<script>
+"use strict";
+
+/* =======================================================================
+   CONFIGURAÇÃO. Edite só este bloco. Tudo na página se atualiza sozinho.
+   ======================================================================= */
+const CONFIG = {
+  // Link do checkout (Whop, Kiwify, Hotmart...). Enquanto estiver "#", os
+  // botões avisam que o checkout não foi configurado, em vez de falhar em silêncio.
+  checkout: "https://pay.kiwify.com.br/vjk9izS",
+
+  precoCheio: 97,
+  preco: 47,
+  parcelas: "à vista ou em até 3x no cartão",
+
+  dataProva: "2026-11-08T13:30:00-03:00",
+
+  // ESCASSEZ: só use se for verdade e se você for cumprir.
+  // Deixe vagas: null para não exibir contagem de vagas.
+  lote: { nome: "Turma de lançamento", vagas: null, restantes: null },
+
+  // SELO. Aparece no hero, numa faixa antes das entregas e na caixa da oferta.
+  // Para desligar em qualquer lugar, ponha false no campo correspondente.
+  selo: {
+    ativo: true,
+    nome: "Método Coreano de Estudos",
+    linha: "Baseado no",
+    // Frase da faixa. Descreve a disciplina de estudo, não uma origem institucional.
+    descricao: "Estudo diário em blocos curtos e protegidos, repetição espaçada e correção "
+             + "sistemática do erro. A disciplina asiática de estudo, adaptada para quem "
+             + "tem 90 minutos por dia e não o dia inteiro.",
+    noHero: true,
+    naFaixa: true,
+    naOferta: true
+  },
+
+  contato: "contato@metodo90.online",
+  cnpj: "20.763.474/0001-00",
+
+  /* DEPOIMENTOS
+     Comece com a lista VAZIA. Enquanto ela estiver vazia, a página mostra um
+     bloco de recrutamento de turma-piloto no lugar, que é honesto e ainda
+     serve para captar lead. Depois cole os depoimentos reais assim:
+
+     { texto: "...", nome: "Nome real", ctx: "contexto", nota: 5 }
+
+     Peça sempre autorização por escrito para publicar. */
+  depoimentos: [
+    {
+      texto: "Eu trabalho das 7h às 18h e sempre achava que não tinha tempo para estudar. Depois que comecei a seguir o método, percebi que o problema não era tempo, era organização. Hoje estudo todos os dias sem precisar virar a noite.",
+      nome: "Mariana Souza",
+      ctx: "Assistente Administrativa",
+      nota: 5
+    },
+    {
+      texto: "O caderno de erros foi a melhor parte para mim. Eu repetia os mesmos erros nos simulados e nem percebia. Depois que comecei a registrar tudo, minhas revisões ficaram muito mais objetivas e minhas notas começaram a subir.",
+      nome: "Lucas Ferreira",
+      ctx: "Estudante para o ENEM",
+      nota: 5
+    },
+    {
+      texto: "Eu sempre desistia quando atrasava o cronograma. Com o sistema do curso, aprendi a reorganizar a semana sem culpa. Pela primeira vez consegui manter uma rotina de estudos por mais de dois meses.",
+      nome: "Camila Ribeiro",
+      ctx: "Concurseira",
+      nota: 5
+    },
+    {
+      texto: "Eu passava horas assistindo aulas, mas fazia poucas questões. O curso me mostrou exatamente como equilibrar teoria e prática. No simulado seguinte senti uma diferença enorme no meu desempenho.",
+      nome: "Rafael Martins",
+      ctx: "Estudante de Engenharia",
+      nota: 5
+    },
+    {
+      texto: "Com dois filhos pequenos, eu já tinha aceitado que nunca conseguiria estudar de verdade. As estratégias de organização me ajudaram a aproveitar pequenos períodos do dia e isso fez toda a diferença. Hoje consigo manter constância sem me sentir sobrecarregada.",
+      nome: "Patrícia Almeida",
+      ctx: "Auxiliar de Enfermagem",
+      nota: 5
+    }
+  ],
+
+  mostrarExemplos: false
+};
+
+const EXEMPLOS = [];
+
+/* ======================= grade animada do hero ======================== */
+(function(){
+  const grid = document.getElementById("dgrid");
+  if(!grid) return;
+  const DAYS = ["S","T","Q","Q","S","S","D"], ROWS = 14, START = 5;
+  // 1 = ocupado. Semana de quem trabalha 8h e faz faculdade à noite.
+  const busy = [];
+  for(let r=0;r<ROWS;r++){
+    const h = START + r;
+    busy.push(DAYS.map((_,d)=>{
+      const wd = d < 5;
+      if(wd && h >= 7 && h <= 17) return 1;
+      if(wd && h >= 19) return 1;
+      if(d === 6 && h >= 10 && h <= 13) return 1;
+      return 0;
+    }));
+  }
+  // blocos de estudo nas brechas
+  const study = { 0:[[5,2]], 1:[[5,2]], 2:[[5,2]], 3:[[5,2]], 4:[[5,2]], 5:[[9,4]], 6:[[14,3]] };
+
+  grid.appendChild(document.createElement("div"));
+  DAYS.forEach(d=>{
+    const e=document.createElement("div"); e.className="dh"; e.textContent=d; grid.appendChild(e);
+  });
+  const cells=[];
+  for(let r=0;r<ROWS;r++){
+    const lab=document.createElement("div"); lab.className="hl";
+    lab.textContent = (START+r)%2===0 ? String(START+r).padStart(2,"0") : "";
+    grid.appendChild(lab);
+    for(let d=0;d<7;d++){
+      const c=document.createElement("div"); c.className="dc";
+      if(busy[r][d]) c.classList.add("busy");
+      grid.appendChild(c); cells.push({el:c,r:r,d:d});
+    }
+  }
+  const marks=[];
+  Object.keys(study).forEach(d=>{
+    study[d].forEach(([start,len])=>{
+      for(let k=0;k<len;k++){
+        const r = start - START + k;
+        const f = cells.find(x=>x.r===r && x.d===+d);
+        if(f && !busy[r][+d]) marks.push(f.el);
+      }
+    });
+  });
+  const reduce = window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+  const out = document.getElementById("demoHours");
+  const totalMin = marks.length * 30;
+  function show(){
+    marks.forEach((el,i)=>{
+      el.classList.add("st");
+      setTimeout(()=>el.classList.add("on"), reduce ? 0 : 90 + i*55);
+    });
+    let n=0;
+    const step = ()=>{
+      n = Math.min(n+30, totalMin);
+      out.textContent = Math.floor(n/60)+"h"+String(n%60).padStart(2,"0");
+      if(n < totalMin) setTimeout(step, reduce ? 0 : 55);
+    };
+    setTimeout(step, reduce ? 0 : 140);
+  }
+  if("IntersectionObserver" in window){
+    const io = new IntersectionObserver(es=>{
+      es.forEach(e=>{ if(e.isIntersecting){ show(); io.disconnect(); } });
+    },{threshold:.25});
+    io.observe(grid);
+  } else show();
+})();
+
+/* ======================= preço, links e escassez ===================== */
+(function(){
+  const money = n => n.toLocaleString("pt-BR");
+  const set = (id, v)=>{ const e=document.getElementById(id); if(e) e.textContent=v; };
+
+  set("priceNow", money(CONFIG.preco));
+  set("priceFinal", money(CONFIG.preco));
+  set("priceSticky", money(CONFIG.preco));
+  set("priceOld", "R$ " + money(CONFIG.precoCheio));
+  set("stackTotal", "de R$ " + money(CONFIG.precoCheio));
+  set("priceNote", CONFIG.parcelas);
+
+  const lot = CONFIG.lote || {};
+  set("lotLabel", (lot.restantes != null && lot.vagas != null)
+      ? lot.nome + " · " + lot.restantes + " de " + lot.vagas + " vagas"
+      : (lot.nome || ""));
+
+  const links = ["ctaMain","ctaFinal","ctaSticky"];
+  if(CONFIG.checkout && CONFIG.checkout !== "#"){
+    links.forEach(id=>{ const e=document.getElementById(id); if(e) e.href = CONFIG.checkout; });
+  }else{
+    links.forEach(id=>{
+      const e=document.getElementById(id); if(!e) return;
+      if(id === "ctaSticky"){ e.href = "#oferta"; return; }
+      e.href = "#oferta";
+      e.addEventListener("click", ev=>{
+        ev.preventDefault();
+        alert("Link de checkout ainda não configurado.\n\nAbra o arquivo e edite CONFIG.checkout com a URL do seu Whop ou Kiwify.");
+      });
+    });
+  }
+
+  const fl = document.getElementById("footLinks");
+  if(fl){
+    fl.innerHTML =
+      'Contato: <a href="mailto:' + CONFIG.contato + '">' + CONFIG.contato + '</a>'
+      + ' · <a href="#">Termos de uso</a> · <a href="#">Política de privacidade</a>'
+      + ' · CNPJ ' + CONFIG.cnpj;
+  }
+})();
+
+/* ======================= contagem regressiva real ==================== */
+(function(){
+  const alvo = new Date(CONFIG.dataProva).getTime();
+  const el = id => document.getElementById(id);
+  function tick(){
+    const dif = alvo - Date.now();
+    if(dif <= 0){
+      const c = el("count");
+      if(c) c.innerHTML = '<div style="grid-column:1/-1"><b style="font-size:19px">É hoje</b>'
+        + '<span>boa prova</span></div>';
+      return;
+    }
+    const d = Math.floor(dif/86400000),
+          h = Math.floor(dif%86400000/3600000),
+          m = Math.floor(dif%3600000/60000),
+          s = Math.floor(dif%60000/1000);
+    const p = n => String(n).padStart(2,"0");
+    el("cD").textContent = d; el("cH").textContent = p(h);
+    el("cM").textContent = p(m); el("cS").textContent = p(s);
+
+    const sem = Math.floor(d/7);
+    const txtSem = sem + (sem === 1 ? " semana" : " semanas");
+    el("pillWeeks").textContent = txtSem + " até o Enem 2026";
+    el("offerWeeks").textContent = txtSem;
+    el("stickyWeeks").textContent = txtSem + " até a prova";
+    el("tbDays").textContent = d + (d === 1 ? " dia" : " dias");
+    setTimeout(tick, 1000);
+  }
+  tick();
+})();
+
+/* ======================= prova social ================================= */
+(function(){
+  const area = document.getElementById("socialArea");
+  const title = document.getElementById("socialTitle");
+  const reais = CONFIG.depoimentos || [];
+  const lista = reais.length ? reais : (CONFIG.mostrarExemplos ? EXEMPLOS : []);
+
+  if(!lista.length){
+    title.textContent = "Turma piloto: 20 vagas com acesso antecipado";
+    area.innerHTML =
+      '<div class="beta">'
+      + '<h3>Ainda não tenho depoimentos, e não vou inventar nenhum.</h3>'
+      + '<p>O Método 90 acabou de ficar pronto. Em vez de encher esta página de elogios fabricados, '
+      + 'estou abrindo 20 vagas de turma piloto: você recebe o acesso completo com desconto e, em troca, '
+      + 'me conta em duas semanas o que funcionou e o que não funcionou na sua rotina.</p>'
+      + '<p style="margin-bottom:0"><b>Quando os primeiros resultados reais chegarem, eles aparecem aqui, '
+      + 'com nome e autorização.</b></p></div>';
+    return;
+  }
+
+  area.innerHTML += '<div class="quotes">' + lista.map(d=>{
+    const ini = (d.nome || "?").trim().split(/\s+/).map(x=>x[0]).slice(0,2).join("").toUpperCase();
+    const st = "★".repeat(Math.max(1, Math.min(5, d.nota || 5)));
+    return '<div class="q"><div class="stars">' + st + '</div>'
+      + '<p>' + d.texto + '</p>'
+      + '<div class="who"><div class="av">' + ini + '</div><div><b>' + d.nome + '</b>'
+      + '<span>' + (d.ctx || "") + '</span></div></div></div>';
+  }).join("") + '</div>';
+})();
+
+/* ======================= selo ======================================== */
+(function(){
+  const S = CONFIG.selo || {};
+  if(!S.ativo || !S.nome) return;
+
+  const ini = S.nome.trim().split(/\s+/)
+    .filter(w => w.length > 2)
+    .map(w => w[0]).slice(0,2).join("").toUpperCase();
+
+  const hero = document.getElementById("sealHero");
+  if(hero && S.noHero !== false){
+    hero.innerHTML =
+      '<div class="seal"><div class="mark">' + ini + '</div>'
+      + '<div><span>' + (S.linha || "Baseado no") + '</span><b>' + S.nome + '</b></div></div>';
+  }
+
+  const band = document.getElementById("sealBand");
+  if(band && S.naFaixa !== false && S.descricao){
+    band.innerHTML =
+      '<div class="sealband"><div class="big">' + ini + '</div>'
+      + '<div><h3>' + S.nome + '</h3><p>' + S.descricao + '</p></div></div>';
+  }
+
+  const lab = document.getElementById("offerLabel");
+  if(lab && S.naOferta !== false){
+    lab.textContent = "Método 90 · " + S.nome;
+  }
+})();
+
+/* ======================= barra fixa no celular ======================= */
+(function(){
+  const bar = document.getElementById("sticky");
+  const hero = document.querySelector(".hero");
+  if(!bar || !hero) return;
+  function onScroll(){
+    const passou = window.scrollY > hero.offsetHeight * .8;
+    bar.classList.toggle("on", passou);
+  }
+  window.addEventListener("scroll", onScroll, { passive:true });
+  onScroll();
+})();
+</script>
+</body>
+</html>
