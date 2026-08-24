@@ -330,7 +330,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="topbar">
   <div class="wrap">
     <span class="wordmark">Método <span>90</span></span>
-    <span>Prova em <b id="tbDays">102 dias</b></span>
+    <span>Prova em <b id="tbDays">… dias</b></span>
   </div>
 </div>
 
@@ -338,7 +338,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="hero">
   <div class="wrap grid2">
     <div>
-      <span class="pill"><i></i> <span id="pillWeeks">14 semanas até o Enem 2026</span></span>
+      <span class="pill"><i></i> <span id="pillWeeks">… semanas até o Enem</span></span>
       <div id="sealHero"></div>
       <h1>Você não tem<br>seis horas por dia.<br><span class="amber">Tem noventa minutos.</span></h1>
       <p class="sub">O sistema de estudo para quem trabalha oito horas, faz faculdade à noite e mesmo assim vai prestar o Enem.</p>
@@ -585,7 +585,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h3>É para você se</h3>
         <ul>
           <li>Você trabalha e tem entre 1h e 2h por dia, no máximo</li>
-          <li>Vai prestar o Enem em 8 e 15 de novembro de 2026</li>
+          <li>Vai prestar o Enem em <span id="datasProva">novembro</span></li>
           <li>Já tentou seguir cronograma e não deu conta</li>
           <li>Quer saber o que estudar, não assistir mais aula</li>
           <li>Faz faculdade, tem filho, ou volta a estudar depois de anos</li>
@@ -622,7 +622,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="narrow" style="text-align:center;margin-bottom:28px">
       <div class="eyebrow">A oferta</div>
-      <h2>Tudo o que você precisa para as próximas <span class="amber" id="offerWeeks">14 semanas</span></h2>
+      <h2>Tudo o que você precisa para as próximas <span class="amber" id="offerWeeks">… semanas</span></h2>
     </div>
 
     <div class="count" id="count">
@@ -632,7 +632,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div><b id="cS">00</b><span>seg</span></div>
     </div>
     <p style="text-align:center;font-family:var(--mono);font-size:12.5px;color:#8A93A5;margin-bottom:30px">
-      até a prova do dia 8 de novembro de 2026
+      até a prova do dia <span id="dataProvaLegenda">…</span>
     </p>
 
     <div class="narrow">
@@ -774,7 +774,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       aprovação.</b> O resultado no Enem depende de fatores que nenhum material controla, incluindo a prova daquele ano,
       a concorrência do curso escolhido e a constância de cada pessoa. Método 90 não tem vínculo com o Inep nem com o
       Ministério da Educação. As provas e gabaritos anteriores citados no livro são de acesso público e gratuito no site
-      do Inep. Datas da prova conforme edital do Enem 2026: 8 e 15 de novembro de 2026.
+      do Inep. Datas da prova conforme edital do Enem <span id="anoEnem">2026</span>: <span id="datasProvaFooter">novembro</span>.
     </p>
     <p class="legal" id="footLinks">
       Contato: <a href="mailto:contato@metodo90.online">contato@metodo90.online</a> · <a href="#">Termos de uso</a> · <a href="#">Política de privacidade</a> · CNPJ 20.763.474/0001-00
@@ -987,8 +987,27 @@ const EXEMPLOS = [];
 
 /* ======================= contagem regressiva real ==================== */
 (function(){
-  const alvo = new Date(CONFIG.dataProva).getTime();
+  const dataProvaObj = new Date(CONFIG.dataProva);
+  const alvo = dataProvaObj.getTime();
   const el = id => document.getElementById(id);
+
+  /* ---------- datas dinâmicas ---------- */
+  const anoEnem = dataProvaObj.getFullYear();
+  const meses = ["janeiro","fevereiro","março","abril","maio","junho",
+                 "julho","agosto","setembro","outubro","novembro","dezembro"];
+  const dia1 = dataProvaObj.getDate();
+  const mes1 = meses[dataProvaObj.getMonth()];
+  // Segundo domingo = 7 dias depois
+  const dia2 = dia1 + 7;
+  const datasFormatada = dia1 + " e " + dia2 + " de " + mes1 + " de " + anoEnem;
+  const dataLegenda = dia1 + " de " + mes1 + " de " + anoEnem;
+
+  // Preenche elementos estáticos com datas dinâmicas
+  if(el("datasProva"))      el("datasProva").textContent      = datasFormatada;
+  if(el("datasProvaFooter")) el("datasProvaFooter").textContent = datasFormatada;
+  if(el("dataProvaLegenda")) el("dataProvaLegenda").textContent = dataLegenda;
+  if(el("anoEnem"))          el("anoEnem").textContent          = anoEnem;
+
   function tick(){
     const dif = alvo - Date.now();
     if(dif <= 0){
@@ -1007,7 +1026,7 @@ const EXEMPLOS = [];
 
     const sem = Math.floor(d/7);
     const txtSem = sem + (sem === 1 ? " semana" : " semanas");
-    el("pillWeeks").textContent = txtSem + " até o Enem 2026";
+    el("pillWeeks").textContent = txtSem + " até o Enem " + anoEnem;
     el("offerWeeks").textContent = txtSem;
     el("stickyWeeks").textContent = txtSem + " até a prova";
     el("tbDays").textContent = d + (d === 1 ? " dia" : " dias");
